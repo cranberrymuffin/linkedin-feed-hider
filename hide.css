@@ -1,0 +1,34 @@
+/*
+ * LinkedIn's class names are hashed (e.g. "i0liv5") and churn, so these rules
+ * rely on layout structure instead: on the feed, <main> holds
+ *   <aside> (profile)  <section> (feed)  <aside> (news, puzzles)
+ */
+
+/* Home tab in the top nav. It's a JS-routed <button> with only an English
+   label, so match it by position (the item before My Network) as well. */
+nav li:has(+ li > a[href$="linkedin.com/mynetwork"]),
+nav li:has(+ li > a[href$="linkedin.com/mynetwork/"]),
+nav li:has(> a[href$="linkedin.com/feed/"]),
+nav li:has(> button[aria-label^="Home"]) {
+  display: none !important;
+}
+
+/* Feed page: hide the feed column and the news/puzzles rail; the profile
+   sidebar stays. */
+html.lfh-on main aside + section > *,
+html.lfh-on main section + aside > *,
+/* Fallback: the feed list's id embeds its feed type. */
+html.lfh-on [id*="FeedType_MAIN_FEED"] {
+  display: none !important;
+}
+
+/* Shown in place of the feed until the redirect to Jobs lands. */
+html.lfh-on main aside + section::after {
+  content: "Stop scrolling and do something great.";
+  display: block;
+  padding: 48px 16px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
