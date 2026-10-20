@@ -16,7 +16,7 @@ Chrome listing (see `STORE_LISTING.md`).
 4. **Do you need to submit source code?** No. Nothing is minified or
    generated; the zip contains the source as written.
 5. Fill in the listing fields from `STORE_LISTING.md`.
-6. **License:** pick one (e.g. MIT). The bundled icon is from Noto Emoji under
+6. **License:** MIT (see `LICENSE`). The bundled icon is from Noto Emoji under
    the Apache License 2.0 (`icons/LICENSE-noto-emoji`, `icons/NOTICE`).
 7. **Privacy policy:** not required. The manifest declares that no data is
    collected (`data_collection_permissions: none`).

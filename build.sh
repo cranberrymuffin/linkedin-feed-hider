@@ -8,7 +8,7 @@ set -eu
 cd "$(dirname "$0")"
 
 version=$(jq -r .version manifest.json)
-files="content.js hide.css icons/icon16.png icons/icon32.png icons/icon48.png icons/icon128.png icons/LICENSE-noto-emoji icons/NOTICE"
+files="LICENSE content.js hide.css icons/icon16.png icons/icon32.png icons/icon48.png icons/icon128.png icons/LICENSE-noto-emoji icons/NOTICE"
 chrome="dist/feed-hider-for-linkedin-$version.zip"
 firefox="dist/feed-hider-for-linkedin-$version-firefox.zip"
 
