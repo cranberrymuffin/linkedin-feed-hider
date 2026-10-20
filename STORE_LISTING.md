@@ -1,7 +1,8 @@
 # Chrome Web Store listing: Feed Hider for LinkedIn
 
 Copy each section into the matching field in the Developer Dashboard.
-Upload: `dist/feed-hider-for-linkedin-1.0.0.zip`
+Build with `./build.sh`, then upload `dist/feed-hider-for-linkedin-1.0.0.zip`.
+For Firefox, see `FIREFOX_LISTING.md`.
 
 ## Store listing tab
 
