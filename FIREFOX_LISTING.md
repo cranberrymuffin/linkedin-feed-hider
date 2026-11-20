@@ -1,7 +1,7 @@
 # Firefox Add-ons listing: Feed Hider for LinkedIn
 
 Build with `./build.sh`, then upload
-`dist/feed-hider-for-linkedin-1.0.0-firefox.zip` at
+`dist/feed-hider-for-linkedin-1.0.1-firefox.zip` at
 https://addons.mozilla.org/developers/addon/submit/
 
 Name, summary, description, category and screenshot are the same as the

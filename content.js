@@ -3,9 +3,10 @@ const JOBS_URL = "/jobs/";
 let leaving = false;
 let lastPath = location.pathname;
 
-// Only the home feed itself, not /feed/update/... (links to individual posts).
+// The home feed and its tabs (/feed/foryou/, /feed/following/, ...), but not
+// /feed/update/... (links to individual posts).
 function isFeedPath(path) {
-  return path === "/" || /^\/feed\/?$/.test(path);
+  return path === "/" || /^\/feed(\/(?!update\/).*)?$/.test(path);
 }
 
 function apply() {
